@@ -77,9 +77,17 @@ module.exports = {
                 loader: 'vue-loader',
             },
             {
+                test: /\.pug$/,
+                loader: 'pug-plain-loader',
+            },
+            {
                 test: /\.css$/,
-                loader: 'css-loader'
-            }
+                loader: 'css-loader',
+            },
+            {
+                test: /(\.styl$)|(\.stylus$)/,
+                loader: 'css-loader!stylus-loader',
+            },
         ],
     },
 
