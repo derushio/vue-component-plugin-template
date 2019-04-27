@@ -19,6 +19,7 @@ console.log('NODE_ENV:', env.NODE_ENV);
 const path = require('path');
 const webpack = require('webpack');
 const nodeExternals = require('webpack-node-externals');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 /**
  * Path / File
@@ -36,7 +37,7 @@ const isProduct = env.NODE_ENV == 'production';
  * Webpack Config
  */
 module.exports = {
-    target: 'node',
+    target: 'web',
     mode: env.NODE_ENV,
 
     context: contextPath,
@@ -52,9 +53,10 @@ module.exports = {
     },
 
     resolve: {
-        extensions: [ '.js', '.ts', '.json' ],
+        extensions: [ '.js', '.ts', '.json', '.vue' ],
         alias: {
             '@': path.resolve(srcPath),
+            'vue$': 'vue/dist/vue.esm.js',
         },
     },
 
@@ -62,8 +64,22 @@ module.exports = {
         rules: [
             {
                 test: /\.ts$/,
-                use: [ 'ts-loader', 'tslint-loader' ],
+                use: [
+                    {
+                        loader: 'ts-loader',
+                        options: { appendTsSuffixTo: [ /\.vue$/ ] }
+                    },
+                    'tslint-loader'
+                ],
             },
+            {
+                test: /\.vue$/,
+                loader: 'vue-loader',
+            },
+            {
+                test: /\.css$/,
+                loader: 'css-loader'
+            }
         ],
     },
 
@@ -73,6 +89,7 @@ module.exports = {
                 NODE_ENV: `"${env.NODE_ENV}"`,
             },
         }),
+        new VueLoaderPlugin()
     ],
 
     devtool: isProduct? false: '#source-map',
