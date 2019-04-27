@@ -11,5 +11,7 @@ export default class Test extends Vue {}
 </script>
 
 <style lang='stylus' scoped>
-.test {}
+.test
+    p
+        color: red;
 </style>
