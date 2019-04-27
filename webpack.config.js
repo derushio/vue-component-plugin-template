@@ -44,12 +44,13 @@ module.exports = {
     entry: {
         main: path.resolve(srcPath, 'main.ts'),
     },
-    externals: [ nodeExternals() ],
+    externals: [],
 
     output: {
         path: distPath,
         filename: '[name].bundle.js',
-        publicPath: './',
+        library: 'SomeLibrary',
+        libraryTarget: 'umd',
     },
 
     resolve: {

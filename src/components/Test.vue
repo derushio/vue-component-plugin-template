@@ -1,5 +1,6 @@
 <template lang='pug'>
 .test
+    p test
 </template>
 
 <script lang='ts'>
