@@ -8,4 +8,5 @@
 * Vueのコンポーネントプラグインを制作するためのテンプレート
 
 ## 使用方法
+* **Test.vueは削除してください**
 * `src/components` にコンポーネントを設置し、 `src/components/index.ts` にコンポーネントを記述して `yarn build` する
