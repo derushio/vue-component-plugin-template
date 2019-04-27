@@ -1,15 +1,11 @@
-import * as sourceMapSupport from 'source-map-support';
+import Vue, { PluginObject } from 'vue';
+import { installers } from './components';
 
-import * as _ from 'lodash';
-
-function initSourceMap() {
-    if (process.env.NODE_ENV === 'development') {
-        sourceMapSupport.install();
-        console.log('ENV_LOG:', 'SOURCE MAP ENABLED');
-    }
-}
-
-async function main() {
-    initSourceMap();
-}
-main();
+export default {
+    install: (MyVue: typeof Vue) => {
+        // install
+        for (const installer of installers) {
+            MyVue.use(installer);
+        }
+    },
+} as PluginObject<{}>;
