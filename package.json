@@ -16,8 +16,8 @@
         "pug": "^2.0.3",
         "stylus": "^0.54.5",
         "typescript": "^3.4.5",
-        "vue-property-decorator": "^8.1.0",
-        "vue": "^2.6.10"
+        "vue": "^2.6.10",
+        "vue-property-decorator": "^8.1.0"
     },
     "devDependencies": {
         "@babel/core": "^7.7.7",
@@ -37,12 +37,13 @@
         "style-loader": "^0.23.1",
         "stylus-loader": "^3.0.2",
         "ts-loader": "^6.2.1",
-        "tslint-loader": "^3.6.0",
         "tslint": "^5.20.1",
+        "tslint-loader": "^3.6.0",
         "typedoc": "^0.15.8",
+        "vue-loader": "^15.8.3",
         "vue-template-compiler": "^2.6.10",
+        "webpack": "^4.41.5",
         "webpack-cli": "^3.3.10",
-        "webpack-node-externals": "^1.7.2",
-        "webpack": "^4.41.5"
+        "webpack-node-externals": "^1.7.2"
     }
 }
