@@ -93,13 +93,9 @@ module.exports = {
     },
 
     plugins: [
-        new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: `"${env.NODE_ENV}"`,
-            },
-        }),
-        new VueLoaderPlugin()
+        new webpack.DefinePlugin({}),
     ],
+    new VueLoaderPlugin()
 
     devtool: isProduct? false: '#source-map',
 };
