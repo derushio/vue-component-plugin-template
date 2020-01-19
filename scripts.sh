@@ -11,6 +11,12 @@ function build() {
     mv 'node_modules/_vue' 'node_modules/vue'
 }
 
+function publish() {
+    build
+    yarn publish
+    git add -A && git commit -m 'release' && git push
+}
+
 function start() {
     node dist/main.bundle.js
 }
