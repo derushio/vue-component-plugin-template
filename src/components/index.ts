@@ -1,5 +1,5 @@
 import Vue, { PluginObject } from 'vue';
-import Test from './Test.vue';
+import Test from '@/components/Test.vue';
 
 export const components = [ Test ];
 
