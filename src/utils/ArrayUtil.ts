@@ -6,7 +6,7 @@ export default class ArrayUtil {
      * startからend(含む)までの配列を生成
      * startだけの場合はその数の配列を生成
      */
-    public static range(start: number, end?: number) {
+    public static range(start: number, end?: number): number[] {
         if (end == null) {
             end = start;
             start = 0;
@@ -17,5 +17,7 @@ export default class ArrayUtil {
         return [...Array(end).keys()].slice(start);
     }
 
-    protected constructor() {}
+    protected constructor() {
+        // pass;
+    }
 }
