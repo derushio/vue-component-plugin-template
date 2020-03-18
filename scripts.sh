@@ -5,11 +5,11 @@ function clean() {
 }
 
 function lint() {
-    eslint ./src/**/*.ts
+    npx eslint ./src/**/*.ts
 }
 
 function build() {
-    yarn lint && \
+    lint && \
         yarn install && \
         mv 'node_modules/vue' 'node_modules/_vue' && \
         clean && $(npm bin)/webpack || true && \
