@@ -26,7 +26,7 @@
         "stylus": "^0.54.7",
         "typescript": "^3.8.3",
         "vue": "^2.6.11",
-        "vue-property-decorator": "^8.4.0"
+        "vue-property-decorator": "^8.4.1"
     },
     "devDependencies": {
         "@babel/core": "^7.8.7",
@@ -57,7 +57,7 @@
         "stylus-loader": "^3.0.2",
         "ts-jest": "^25.2.1",
         "ts-loader": "^6.2.1",
-        "typedoc": "^0.17.0",
+        "typedoc": "^0.17.1",
         "vue-loader": "^15.9.0",
         "vue-template-compiler": "^2.6.11",
         "webpack": "^4.42.0",
@@ -66,5 +66,8 @@
     },
     "peerDependencies": {
         "vue": "^2.6.11"
+    },
+    "resolutions": {
+        "minimist": "^1.2.5"
     }
 }
