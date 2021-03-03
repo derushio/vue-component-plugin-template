@@ -21,7 +21,7 @@
     },
     "dependencies": {
         "lodash": "^4.17.15",
-        "pug": "^2.0.4",
+        "pug": "^3.0.1",
         "shortid": "^2.2.15",
         "stylus": "^0.54.7",
         "typescript": "^3.8.3",
