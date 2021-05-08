@@ -20,7 +20,7 @@
         "test": "jest"
     },
     "dependencies": {
-        "lodash": "^4.17.15",
+        "lodash": "^4.17.21",
         "pug": "^2.0.4",
         "shortid": "^2.2.15",
         "stylus": "^0.54.7",
